@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="style1.css"> -->
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                /* position: relative; */
+                width: 100vw;
+                height: 100vh;
+                border: 1px solid blue;
+                overflow-x: hidden;
+            }
+
+
+            /* .container  */
+            img {
+                width: 100%;
+                height: 100%;
+                background-color: red;
+            }
+
+
+
+            /* .container */
+            .mask-img {
+                position: absolute;
+
+                /* width: 100vw;
+                height: 100vh;  */
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+
+                mask-repeat: no-repeat;
+                mask-size: contain;
+
+                opacity: 0;
+                animation: fadein 2s forwards;
+                border: 1px solid blue;
+            }
+
+
+
+            .mask-img.clif {
+                animation-delay: 1s;
+                -webkit-mask-image: url(clif-mask2.png);
+                mask-image: url(clif-mask2.png);
+                mask-position: 192px;
+                -webkit-mask-position: 192px;
+                position: relative;
+
+            }
+
+            .mask-img.sky {
+                animation-delay: 2s;
+                -webkit-mask-image: url(bg-clif-outlihe-fotor-bg-remover-20231106184743.png);
+                mask-image: url(bg-clif-outlihe-fotor-bg-remover-20231106184743.png);
+
+
+            }
+
+            .mask-img.person {
+                animation-delay: 3s;
+                -webkit-mask-image: url(person.png);
+                mask-image: url(person.png);
+                /* mask-position: 0px;
+                -webkit-mask-position: 0px; */
+                top: 288px;
+    left: 697px;
+    width: 20%;
+
+            }
+
+            h1 {
+                border: 1px solid blue;
+            }
+
+            @keyframes fadein {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            /* position: relative;
+            left: -65px; */
+
+        </style>
+    </head>
+
+    <body>
+        <!-- <h1>this is image is here</h1> -->
+        <div class="container">
+            <div class=" mask-img clif">
+                <img src="https://images.squarespace-cdn.com/content/v1/56b0c96b01dbae2c1e653ac8/1461594794161-W1ZZFJDV9345IBJNI4Q3/Guy+on+cliff+with+arms+raised.jpg?format=1500w"
+                    alt="">
+            </div>
+
+            <div class=" mask-img person">
+                <img src="https://images.squarespace-cdn.com/content/v1/56b0c96b01dbae2c1e653ac8/1461594794161-W1ZZFJDV9345IBJNI4Q3/Guy+on+cliff+with+arms+raised.jpg?format=1500w"
+                    alt="">
+            </div>
+                     <!-- <div class="mask-img sky">
+                <img src="https://images.squarespace-cdn.com/content/v1/56b0c96b01dbae2c1e653ac8/1461594794161-W1ZZFJDV9345IBJNI4Q3/Guy+on+cliff+with+arms+raised.jpg?format=1500w"
+                    alt=""
+                    >            </div> -->
+
+        </div>
+
+
+
+
+
+
+    </body>
+
+</html>
